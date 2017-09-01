@@ -95,16 +95,16 @@
 
 
 
-<meta name="description" content="R语言 定制图片在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。  创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。 1png(filename = &quot;simulation.PNG&quot;, width = 25,height = 18, units =&quot;cm&quot;, bg = &quot;white&quot;,">
+<meta name="description" content="R语言 定制图片在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。  创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="my">
 <meta property="og:url" content="http://yoursite.com/2017/09/01/my/index.html">
 <meta property="og:site_name" content="卡哇伊">
-<meta property="og:description" content="R语言 定制图片在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。  创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。 1png(filename = &quot;simulation.PNG&quot;, width = 25,height = 18, units =&quot;cm&quot;, bg = &quot;white&quot;,">
-<meta property="og:updated_time" content="2017-09-01T09:17:25.019Z">
+<meta property="og:description" content="R语言 定制图片在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。  创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。">
+<meta property="og:updated_time" content="2017-09-01T09:20:06.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="my">
-<meta name="twitter:description" content="R语言 定制图片在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。  创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。 1png(filename = &quot;simulation.PNG&quot;, width = 25,height = 18, units =&quot;cm&quot;, bg = &quot;white&quot;,">
+<meta name="twitter:description" content="R语言 定制图片在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。  创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。">
 
 
 
@@ -336,15 +336,7 @@
       
         <h1 id="R语言-定制图片"><a href="#R语言-定制图片" class="headerlink" title="R语言 定制图片"></a>R语言 定制图片</h1><p>在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。</p>
 <ol>
-<li><p>创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">png(filename = <span class="string">"simulation.PNG"</span>, width = <span class="number">25</span>,height = <span class="number">18</span>, units =<span class="string">"cm"</span>, bg = <span class="string">"white"</span>, res = <span class="number">600</span>)</div></pre></td></tr></table></figure>
-</li>
-<li><p>设置图片到画布的边距，前两个数值表示左边距和右边距，适当增大它们，可以避免横纵坐标轴名称显示不全的情况。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">par(mar=c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">2</span>))</div></pre></td></tr></table></figure>
-</li>
-<li><p>绘制图形，cex.axis, cex.lab调整坐标轴的粗细和坐标轴标签的大小，lwd调整图形线的粗细，cex调整图形点的大小，legend表示图例，其中pt.cex和cex两个参数用于调整图例的大小，最后用dev.off()命令关闭文件，一张定制的图片就完成了。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">plot(x1,y1,type=<span class="string">"o"</span>,cex.axis=<span class="number">2.6</span>,cex.lab=<span class="number">2.6</span>,xlab=<span class="string">"Recall"</span>    ,ylab=<span class="string">"Precision"</span>,lty=<span class="number">1</span>,lwd=<span class="number">3</span>,cex=<span class="number">1.4</span>,ylim=c(<span class="number">0.5</span>,<span class="number">1.025</span>))</div><div class="line">lines(x2,y2,type=<span class="string">"o"</span>,lty=<span class="number">2</span>,lwd=<span class="number">3</span>,pch=<span class="number">2</span>,cex=<span class="number">1.4</span>)</div><div class="line">lines(x3,y3,type=<span class="string">"o"</span>,lty=<span class="number">3</span>,lwd=<span class="number">3</span>,pch=<span class="number">3</span>,cex=<span class="number">1.4</span>)</div><div class="line">legend(x.location,y.location,c(<span class="string">"Bayes Factor"</span>,<span class="string">"LLR"</span>,<span class="string">"Chi-square"</span>),       lty=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),pch=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),lwd=<span class="number">3</span>,pt.cex=<span class="number">1.5</span>,cex=<span class="number">1.9</span>)</div><div class="line">dev.off()</div></pre></td></tr></table></figure>
-</li>
+<li>创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。</li>
 </ol>
 
       
