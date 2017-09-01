@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/01/R语言 定制图片/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/01/my/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fanyiwei">
@@ -283,7 +283,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/01/R语言 定制图片/" itemprop="url">R语言 定制图片</a></h1>
+                <a class="post-title-link" href="/2017/09/01/my/" itemprop="url">my</a></h1>
         
 
         <div class="post-meta">
@@ -293,9 +293,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-01T17:01:51+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-01T17:09:31+08:00">
                 2017-09-01
               </time>
             
@@ -335,19 +335,7 @@
       
         
           
-            <h1 id="R语言-定制图片"><a href="#R语言-定制图片" class="headerlink" title="R语言 定制图片"></a>R语言 定制图片</h1><p>在论文写作中，我们常常需要输出图片到文件，本文将介绍如何用R中的基本绘图命令plot定制图片的大小、坐标轴、图例等。</p>
-<ol>
-<li><p>创建一个名为simulation的空白画布，格式为png，设置宽度、高度、单位、背景色和像素。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">png(filename = <span class="string">"simulation.PNG"</span>, width = <span class="number">25</span>,height = <span class="number">18</span>, units =<span class="string">"cm"</span>, bg = <span class="string">"white"</span>, res = <span class="number">600</span>)</div></pre></td></tr></table></figure>
-</li>
-<li><p>设置图片到画布的边距，前两个数值表示左边距和右边距，适当增大它们，可以避免横纵坐标轴名称显示不全的情况。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">par(mar=c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">2</span>))</div></pre></td></tr></table></figure>
-</li>
-<li><p>绘制图形，cex.axis, cex.lab调整坐标轴的粗细和坐标轴标签的大小，lwd调整图形线的粗细，cex调整图形点的大小，legend表示图例，其中pt.cex和cex两个参数用于调整图例的大小，最后用dev.off()命令关闭文件，一张定制的图片就完成了。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">plot(x1,y1,type=<span class="string">"o"</span>,cex.axis=<span class="number">2.6</span>,cex.lab=<span class="number">2.6</span>,xlab=<span class="string">"Recall"</span>    ,ylab=<span class="string">"Precision"</span>,lty=<span class="number">1</span>,lwd=<span class="number">3</span>,cex=<span class="number">1.4</span>,ylim=c(<span class="number">0.5</span>,<span class="number">1.025</span>))</div><div class="line">lines(x2,y2,type=<span class="string">"o"</span>,lty=<span class="number">2</span>,lwd=<span class="number">3</span>,pch=<span class="number">2</span>,cex=<span class="number">1.4</span>)</div><div class="line">lines(x3,y3,type=<span class="string">"o"</span>,lty=<span class="number">3</span>,lwd=<span class="number">3</span>,pch=<span class="number">3</span>,cex=<span class="number">1.4</span>)</div><div class="line">legend(x.location,y.location,c(<span class="string">"Bayes Factor"</span>,<span class="string">"LLR"</span>,<span class="string">"Chi-square"</span>),       lty=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),pch=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),lwd=<span class="number">3</span>,pt.cex=<span class="number">1.5</span>,cex=<span class="number">1.9</span>)</div><div class="line">dev.off()</div></pre></td></tr></table></figure>
-</li>
-</ol>
-
+            
           
         
       
@@ -428,22 +416,13 @@
               <a href="/archives/">
             
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
 
           
 
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
-              
-            </div>
           
 
         </nav>
@@ -492,7 +471,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" href="https://hexo.io">Hexo</a></div>
 
   <span class="post-meta-divider">|</span>
 
