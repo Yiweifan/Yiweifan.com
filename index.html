@@ -382,6 +382,131 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/31/equation-test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fanyiwei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="卡哇伊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/31/equation-test/" itemprop="url">equation test</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-31T21:06:36+08:00">
+                2017-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="3-2-L-layer-Neural-Network"><a href="#3-2-L-layer-Neural-Network" class="headerlink" title="3.2 - L-layer Neural Network"></a>3.2 - L-layer Neural Network</h1><p>The initialization for a deeper L-layer neural network is more complicated because there are many more weight matrices and bias vectors. When completing the <code>initialize_parameters_deep</code>, you should make sure that your dimensions match between each layer. Recall that $n^{[l]}$ is the number of units in layer $l$. Thus for example if the size of our input $X$ is $(12288, 209)$ (with $m=209$ examples) then:</p>
+<p>Remember that when we compute $W X + b$ in python, it carries out broadcasting. For example, if: </p>
+<p>$$ W = \left[\begin{matrix}<br>    j  &amp; k  &amp; l \\<br>    m  &amp; n &amp; o \\<br>    p  &amp; q &amp; r<br>\end{matrix}\right]\;\;\; X = \left[\begin{matrix}<br>    a  &amp; b  &amp; c \\<br>    d  &amp; e &amp; f \\<br>    g  &amp; h &amp; i<br>\end{matrix} \right]\;\;\; b =\left[\begin{matrix}<br>    s  \\<br>    t  \\<br>    u<br>\end{matrix}\right]$$</p>
+<p>Then $WX + b$ will be:</p>
+<p>$$ WX + b=<br>\left[<br>\begin{matrix}<br>    (ja + kd + lg) + s  &amp; (jb + ke + lh) + s  &amp; (jc + kf + li)+ s \\<br>    (ma + nd + og) + t &amp; (mb + ne + oh) + t &amp; (mc + nf + oi) + t \\<br>    (pa + qd + rg) + u &amp; (pb + qe + rh) + u &amp; (pc + qf + ri)+ u<br>\end{matrix}<br>\right]  $$</p>
+<p>$$\left[<br>\begin{matrix}<br>V_A \\<br>V_B \\<br>V_C \\<br>\end{matrix}<br>\right] =<br>\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; L \\<br>-cosψ &amp; sinψ &amp; L \\<br>-cosψ &amp; -sinψ &amp; L<br>\end{matrix}<br>\right]<br>\left[<br>\begin{matrix}<br>V_x \\<br>V_y \\<br>W \\<br>\end{matrix}<br>\right] $$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -427,7 +552,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -633,6 +758,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
