@@ -465,33 +465,22 @@
         
           
             <ol>
-<li><p>登录命令：ssh</p>
-</li>
-<li><p>进入目标路径：cd</p>
-</li>
-<li><p>查看当前目录下文件名：ls</p>
-</li>
-<li><p>上传本地文件到服务器当前目录：rz</p>
-</li>
-<li><p>下载服务器文件到本地：sz 文件名</p>
-</li>
-<li><p>删除文件：rm -i 文件名</p>
-</li>
-<li><p>后台挂起：</p>
-<ul>
-<li><p>python程序：nohup python simu.py &gt;&gt; output.log 2&gt;&amp;1 &amp;<br>（其中，output.log是定向输出日志文件）</p>
-</li>
-<li><p>R程序：nohup Rscript simu.R &gt;&gt; output.log 2&gt;&amp;1 &amp;</p>
-</li>
+<li>登录命令：ssh</li>
+<li>进入目标路径：cd</li>
+<li>查看当前目录下文件名：ls</li>
+<li>上传本地文件到服务器当前目录：rz</li>
+<li>下载服务器文件到本地：sz 文件名</li>
+<li>删除文件：rm -i 文件名</li>
+<li>后台挂起：<ul>
+<li>python程序：nohup python simu.py &gt;&gt; output.log 2&gt;&amp;1 &amp;<br>（其中，output.log是定向输出日志文件）</li>
+<li>R程序：nohup Rscript simu.R &gt;&gt; output.log 2&gt;&amp;1 &amp;</li>
 </ul>
 </li>
-<li><p>查看进程：jobs</p>
-<ul>
+<li>查看进程：jobs<ul>
 <li>退出后查看进程：ps -aux</li>
 </ul>
 </li>
-<li><p>终止进程：kill -9 进程编码</p>
-</li>
+<li>终止进程：kill -9 进程编码</li>
 </ol>
 
           
@@ -624,10 +613,10 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">plot(x1,y1,type=<span class="string">"o"</span>,cex.axis=<span class="number">2.6</span>,cex.lab=<span class="number">2.6</span>,xlab=<span class="string">"Recall"</span>    ,ylab=<span class="string">"Precision"</span>,lty=<span class="number">1</span>,lwd=<span class="number">3</span>,cex=<span class="number">1.4</span>,ylim=c(<span class="number">0.5</span>,<span class="number">1.025</span>))</div><div class="line">lines(x2,y2,type=<span class="string">"o"</span>,lty=<span class="number">2</span>,lwd=<span class="number">3</span>,pch=<span class="number">2</span>,cex=<span class="number">1.4</span>)</div><div class="line">lines(x3,y3,type=<span class="string">"o"</span>,lty=<span class="number">3</span>,lwd=<span class="number">3</span>,pch=<span class="number">3</span>,cex=<span class="number">1.4</span>)</div><div class="line">legend(x.location,y.location,c(<span class="string">"Bayes Factor"</span>,<span class="string">"LLR"</span>,<span class="string">"Chi-square"</span>),       lty=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),pch=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),lwd=<span class="number">3</span>,pt.cex=<span class="number">1.5</span>,cex=<span class="number">1.9</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p>在坐标轴中使用数学符号，R包latex2exp提供了类似于latex命令的数学符号表达，最后用dev.off()命令关闭文件，一张定制的图片就完成了</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">library(latex2exp)</div><div class="line">legend(x.location,y.location,</div><div class="line">  c(TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1,$\\Delta_&#123;t,m,k&#125;$=1"</span>),</div><div class="line">    TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1,$\\Delta_&#123;t,m,k&#125;$=2"</span>),</div><div class="line">    TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1.5,$\\Delta_&#123;t,m,k&#125;$=1"</span>)),</div><div class="line">  lty=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),lwd=<span class="number">3</span>,pch=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),pt.cex=<span class="number">1</span>,cex=<span class="number">1.3</span>)</div><div class="line">dev.off()</div></pre></td></tr></table></figure>
 </li>
 </ol>
-
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">library(latex2exp)</div><div class="line">legend(x.location,y.location,</div><div class="line">  c(TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1,$\\Delta_&#123;t,m,k&#125;$=1"</span>),</div><div class="line">    TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1,$\\Delta_&#123;t,m,k&#125;$=2"</span>),</div><div class="line">    TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1.5,$\\Delta_&#123;t,m,k&#125;$=1"</span>)),</div><div class="line">  lty=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),lwd=<span class="number">3</span>,pch=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),pt.cex=<span class="number">1</span>,cex=<span class="number">1.3</span>)</div><div class="line">dev.off()</div></pre></td></tr></table></figure>
+<p><img src="MLE.png" alt=""></p>
 
           
         
