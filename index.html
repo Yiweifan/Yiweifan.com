@@ -469,8 +469,14 @@
 <li>进入目标路径：cd</li>
 <li>查看当前目录下文件名：ls</li>
 <li>上传本地文件到服务器当前目录：rz</li>
-<li>下载服务器文件到本地：sz 文件名</li>
-<li>删除文件：rm -i 文件名</li>
+<li>下载服务器文件到本地：sz 文件名<ul>
+<li>下载文件夹下所有文件（不包括子文件夹）：sz dir/*</li>
+</ul>
+</li>
+<li>删除文件：rm -i 文件名<ul>
+<li>rm 文件名</li>
+</ul>
+</li>
 <li>后台挂起：<ul>
 <li>python程序：nohup python simu.py &gt;&gt; output.log 2&gt;&amp;1 &amp;<br>（其中，output.log是定向输出日志文件）</li>
 <li>R程序：nohup Rscript simu.R &gt;&gt; output.log 2&gt;&amp;1 &amp;</li>
@@ -481,6 +487,7 @@
 </ul>
 </li>
 <li>终止进程：kill -9 进程编码</li>
+<li>压缩文件夹：zip filename.zip dir</li>
 </ol>
 
           
