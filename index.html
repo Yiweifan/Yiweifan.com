@@ -264,6 +264,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/Unable-to-find-vcvarsall-bat/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fanyiwei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="卡哇伊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/19/Unable-to-find-vcvarsall-bat/" itemprop="url">Unable to find 'vcvarsall.bat'</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T20:35:08+08:00">
+                2018-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在安装python第三方包时，出现错误“Unable to find ’vcvarsall.bat‘ ”，网上的教程很多，大多无用，这里给出绝对可行的、简单粗暴的解决方法，只适用于python2.7版本。</p>
+<ol>
+<li><p>下载安装Microsoft visual c++ for python 2.7，找到vcvarsall.bat所在目录，记为path.</p>
+</li>
+<li><p>打开python/Lib/distutils/msvc9compiler.py文件，找到函数find_vcvarsall(version)，在第一行处添加如下命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vcvarsall = <span class="string">r"path"</span></div><div class="line"><span class="keyword">return</span> vcvarsall</div></pre></td></tr></table></figure>
+<p>该函数即能找到vcvarsall.bat文件。</p>
+</li>
+</ol>
+<p>python3的解决方法较为复杂，可参考上述解决思路。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Data-Structures-and-Algorithms-in-Python-一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -947,7 +1076,7 @@
 </li>
 </ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">library(latex2exp)</div><div class="line">legend(x.location,y.location,</div><div class="line">  c(TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1,$\\Delta_&#123;t,m,k&#125;$=1"</span>),</div><div class="line">    TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1,$\\Delta_&#123;t,m,k&#125;$=2"</span>),</div><div class="line">    TeX(<span class="string">"$\\Q_&#123;t,t+m&#125;$=1.5,$\\Delta_&#123;t,m,k&#125;$=1"</span>)),</div><div class="line">  lty=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),lwd=<span class="number">3</span>,pch=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),pt.cex=<span class="number">1</span>,cex=<span class="number">1.3</span>)</div><div class="line">dev.off()</div></pre></td></tr></table></figure>
-<p><img src="MLE.png" alt=""></p>
+<p><img src="C:\Users\Yiwei\Documents\Fanyiwei\Essays\HierClassification\article\20180120\simu2_a_evalua2.png" alt="simu2_a_evalua2"></p>
 
           
         
@@ -1028,7 +1157,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1036,6 +1165,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
